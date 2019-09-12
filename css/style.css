@@ -1,0 +1,9 @@
+body { background-color: grey; color: lightgray !important; }
+
+body .container { text-align: center; font-size: 20px; padding-top: 30px; width: 100%; }
+
+body .container .controls { margin: 15px; }
+
+body .container .controls .button { -webkit-text-decoration-line: none !important; text-decoration-line: none !important; color: lightgray !important; margin: 10px; }
+
+body .container .stopwatch { font-size: 50px; padding: 10px; }
