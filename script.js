@@ -44,24 +44,22 @@ class StopWatchComponent extends React.Component {
     }
 
     calculate() {
-        let miliseconds = this.state.miliseconds + 1,
-            seconds = this.state.seconds,
-            minutes = this.state.minutes;
-        if (miliseconds >= 100) {
-            seconds += 1;
-            miliseconds = 0;
+        this.setState({ miliseconds: this.state.miliseconds + 1 });
+           
+        if (this.state.miliseconds >= 100) {
+            this.setState({
+                seconds: this.state.seconds + 1,
+                miliseconds: 0
+            });
         }
-        if (seconds == 60) {
-            minutes += 1;
-            seconds = 0;
-            miliseconds = 0;
+        if (this.state.seconds == 60) {
+            this.setState({
+                minutes: this.state.minutes + 1,
+                seconds: 0,
+                miliseconds: 0
+            });
         }
-        this.setState({
-            minutes,
-            seconds,
-            miliseconds
-        });
-    }
+    };
 
     stop() {
         this.setState({
